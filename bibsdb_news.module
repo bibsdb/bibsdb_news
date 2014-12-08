@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Bibsdb News feature.
+ */
+
+include_once 'bibsdb_news.features.inc';

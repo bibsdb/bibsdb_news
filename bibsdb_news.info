@@ -1,0 +1,6 @@
+name = Bibsdb News
+core = 7.x
+package = Bibsdb
+features[features_api][] = api:2
+features[features_overrides][] = variable.node_options_ding_news.value|0
+project path = sites/default/modules
