@@ -52,10 +52,11 @@ function bibsdb_news_field_default_field_instances_alter(&$data) {
     $data['node-ding_news-field_ding_news_tags']['display']['teaser']['weight'] = 7; /* WAS: 5 */
   }
   if (isset($data['node-ding_news-field_ding_news_title_image'])) {
-    $data['node-ding_news-field_ding_news_title_image']['display']['default']['settings']['styles']['fallback_style'] = 'bibsdb_news_title_image'; /* WAS: 'ding_panorama_primary_large' */
-    $data['node-ding_news-field_ding_news_title_image']['display']['default']['settings']['styles']['max_style'] = 'bibsdb_news_title_image'; /* WAS: 'ding_panorama_primary_large' */
-    $data['node-ding_news-field_ding_news_title_image']['display']['default']['settings']['styles']['style_1'] = 'bibsdb_news_title_image'; /* WAS: 'ding_panorama_primary_medium' */
-    $data['node-ding_news-field_ding_news_title_image']['display']['default']['settings']['styles']['style_2'] = 'bibsdb_news_title_image'; /* WAS: 'ding_panorama_primary_small' */
+    $data['node-ding_news-field_ding_news_title_image']['display']['default']['settings']['styles']['breakpoint_2'] = 480; /* WAS: 500 */
+    $data['node-ding_news-field_ding_news_title_image']['display']['default']['settings']['styles']['fallback_style'] = 'ding_list_large'; /* WAS: 'ding_panorama_primary_large' */
+    $data['node-ding_news-field_ding_news_title_image']['display']['default']['settings']['styles']['max_style'] = 'ding_list_large'; /* WAS: 'ding_panorama_primary_large' */
+    $data['node-ding_news-field_ding_news_title_image']['display']['default']['settings']['styles']['style_1'] = 'ding_list_large'; /* WAS: 'ding_panorama_primary_medium' */
+    $data['node-ding_news-field_ding_news_title_image']['display']['default']['settings']['styles']['style_2'] = 'ding_primary_small'; /* WAS: 'ding_panorama_primary_small' */
     $data['node-ding_news-field_ding_news_title_image']['display']['search_result']['module'] = 'cs_adaptive_image'; /* WAS: '' */
     $data['node-ding_news-field_ding_news_title_image']['display']['search_result']['settings']['image_link'] = ''; /* WAS: '' */
     $data['node-ding_news-field_ding_news_title_image']['display']['search_result']['settings']['styles'] = array(
@@ -100,36 +101,4 @@ function bibsdb_news_strongarm_alter(&$data) {
   if (isset($data['node_options_ding_news'])) {
     unset($data['node_options_ding_news']->value[0]);
   }
-}
-
-/**
- * Implements hook_image_default_styles().
- */
-function bibsdb_news_image_default_styles() {
-  $styles = array();
-
-  // Exported image style: bibsdb_news_title_image.
-  $styles['bibsdb_news_title_image'] = array(
-    'name' => 'bibsdb_news_title_image',
-    'label' => 'bibsdb_news_title_image',
-    'effects' => array(
-      1 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
-        'name' => 'image_scale_and_crop',
-        'data' => array(
-          'width' => 540,
-          'height' => 337,
-        ),
-        'weight' => 1,
-      ),
-    ),
-  );
-
-  return $styles;
 }
