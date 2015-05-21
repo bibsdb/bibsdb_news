@@ -38,7 +38,7 @@ function bibsdb_news_features_override_default_overrides() {
   $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|settings|styles|breakpoint_2"] = 480;
   $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|settings|styles|fallback_style"] = 'ding_list_large';
   $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|settings|styles|max_style"] = 'ding_list_large';
-  $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|settings|styles|style_1"] = 'ding_list_large';
+  $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|settings|styles|style_1"] = 'ding_primary_small';
   $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|settings|styles|style_2"] = 'ding_primary_small';
   $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|search_result|module"] = 'cs_adaptive_image';
   $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|search_result|settings|image_link"] = '';

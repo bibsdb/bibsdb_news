@@ -57,5 +57,5 @@ features[features_overrides][] = field_instance.node-ding_news-og_group_ref.disp
 features[features_overrides][] = field_instance.node-ding_news-og_group_ref.display|teaser|weight
 features[features_overrides][] = variable.field_bundle_settings_node__ding_news.value|view_modes|diff_standard
 features[features_overrides][] = variable.node_options_ding_news.value|0
-mtime = 1431343426
+mtime = 1432116712
 project path = sites/default/modules
