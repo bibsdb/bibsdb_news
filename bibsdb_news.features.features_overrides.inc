@@ -36,8 +36,8 @@ function bibsdb_news_features_override_default_overrides() {
   $overrides["field_instance.node-ding_news-field_ding_news_materials.display|teaser|weight"] = 6;
   $overrides["field_instance.node-ding_news-field_ding_news_tags.display|teaser|weight"] = 7;
   $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|settings|styles|breakpoint_2"] = 480;
-  $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|settings|styles|fallback_style"] = 'ding_list_large';
-  $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|settings|styles|max_style"] = 'ding_list_large';
+  $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|settings|styles|fallback_style"] = 'bibsdb_masonry_large';
+  $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|settings|styles|max_style"] = 'bibsdb_masonry_large';
   $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|settings|styles|style_1"] = 'ding_primary_small';
   $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|default|settings|styles|style_2"] = 'ding_primary_small';
   $overrides["field_instance.node-ding_news-field_ding_news_title_image.display|search_result|module"] = 'cs_adaptive_image';
@@ -70,6 +70,9 @@ function bibsdb_news_features_override_default_overrides() {
 
   // Exported overrides for: variable
   $overrides["variable.field_bundle_settings_node__ding_news.value|view_modes|diff_standard"] = array(
+    'custom_settings' => FALSE,
+  );
+  $overrides["variable.field_bundle_settings_node__ding_news.value|view_modes|workflow_tab"] = array(
     'custom_settings' => FALSE,
   );
   $overrides["variable.node_options_ding_news.value|0"]["DELETED"] = TRUE;

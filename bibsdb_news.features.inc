@@ -53,8 +53,8 @@ function bibsdb_news_field_default_field_instances_alter(&$data) {
   }
   if (isset($data['node-ding_news-field_ding_news_title_image'])) {
     $data['node-ding_news-field_ding_news_title_image']['display']['default']['settings']['styles']['breakpoint_2'] = 480; /* WAS: 500 */
-    $data['node-ding_news-field_ding_news_title_image']['display']['default']['settings']['styles']['fallback_style'] = 'ding_list_large'; /* WAS: 'ding_panorama_primary_large' */
-    $data['node-ding_news-field_ding_news_title_image']['display']['default']['settings']['styles']['max_style'] = 'ding_list_large'; /* WAS: 'ding_panorama_primary_large' */
+    $data['node-ding_news-field_ding_news_title_image']['display']['default']['settings']['styles']['fallback_style'] = 'bibsdb_masonry_large'; /* WAS: 'ding_panorama_primary_large' */
+    $data['node-ding_news-field_ding_news_title_image']['display']['default']['settings']['styles']['max_style'] = 'bibsdb_masonry_large'; /* WAS: 'ding_panorama_primary_large' */
     $data['node-ding_news-field_ding_news_title_image']['display']['default']['settings']['styles']['style_1'] = 'ding_primary_small'; /* WAS: 'ding_panorama_primary_medium' */
     $data['node-ding_news-field_ding_news_title_image']['display']['default']['settings']['styles']['style_2'] = 'ding_primary_small'; /* WAS: 'ding_panorama_primary_small' */
     $data['node-ding_news-field_ding_news_title_image']['display']['search_result']['module'] = 'cs_adaptive_image'; /* WAS: '' */
@@ -95,6 +95,9 @@ function bibsdb_news_field_default_field_instances_alter(&$data) {
 function bibsdb_news_strongarm_alter(&$data) {
   if (isset($data['field_bundle_settings_node__ding_news'])) {
     $data['field_bundle_settings_node__ding_news']->value['view_modes']['diff_standard'] = array(
+      'custom_settings' => FALSE,
+    ); /* WAS: '' */
+    $data['field_bundle_settings_node__ding_news']->value['view_modes']['workflow_tab'] = array(
       'custom_settings' => FALSE,
     ); /* WAS: '' */
   }
